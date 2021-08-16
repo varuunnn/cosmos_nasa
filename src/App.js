@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { createTheme, ThemeProvider } from '@material-ui/core';
 import './App.css';
+import MarsRover from './components/MarsRover';
+//import Apod from './components/Apod';
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      light: '#ffffff',
+      main: '#00ffff',
+      dark: '#ffffff',
+      contrastText: '#00ffff',
+    },
+  },
+});
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ThemeProvider theme={theme}>
+      <MarsRover />
+      </ThemeProvider>
     </div>
   );
 }

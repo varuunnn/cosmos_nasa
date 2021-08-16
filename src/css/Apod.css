@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+body {
+  font-family: 'Righteous', cursive;
+  color: #d14f4f;
+  line-height: 1.7;
+  font-size: 19px;
+  background-color: #222222;
+  /* background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23424242' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
+  background-image: url("../images/nasa_bg.jpg");
+}
+
+.header{
+  margin: 10px;
+  text-align: center;
+}
+
+.datepicker {
+  display: flex;
+  justify-content: center;
+}
+
+.nasa-photo {
+  display: flex;
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: 100%;
+}
+
+.nasa-photo img {
+  flex: 1;
+  margin-right: 50px;
+  object-fit: contain;
+  max-height: 80vh;
+  border: 2px solid rgb(0, 225, 255);
+  box-shadow: 2px 2px 15px #000000;
+  border-radius: 5px;
+}
+
+.nasa-photo h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nasa-photo .date {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.nasa-photo .explanation {
+  color: #bbb;
+}
+
+@media (max-width: 1280px) {
+  .nasa-photo {
+    display: block;
+  }
+
+  .nasa-photo img {
+    object-fit: contain;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
