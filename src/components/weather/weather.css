@@ -1,0 +1,54 @@
+.weather-temp {
+  padding-bottom: 40px;
+  padding-left: 60px;
+}
+
+.weather-temp h1,
+.weather-temp h4,
+.weather-temp p {
+  padding-bottom: 10px;
+}
+
+.weather-info p,
+.weather-info h2 {
+  text-align: center;
+}
+
+.user-weather {
+  color: #d14f4f;
+  padding: 30px;
+  border-radius: 10px;
+ 
+ 
+}
+
+.navbar {
+  background-color: #000000;
+}
+
+.mainImg {
+  padding-top: 10px;
+  height: 100px;
+  align-items: center;
+}
+
+.region {
+  margin-top: 30px;
+}
+
+.regioninput {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 0 30px 0 0px;
+  outline: none;
+  color:rgb(0, 255, 255);
+}
+
+.regioninput::placeholder {
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding-left: 0;
+  color:rgb(0, 255, 255);
+}

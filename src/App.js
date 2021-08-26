@@ -1,7 +1,11 @@
 import { createTheme, ThemeProvider } from '@material-ui/core';
 import './App.css';
-import MarsRover from './components/MarsRover';
-//import Apod from './components/Apod';
+import MarsRover from './pages/MarsRover';
+import Apod from './pages/Apod';
+import Home from './pages/Home'
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 
 const theme = createTheme({
   palette: {
@@ -16,11 +20,18 @@ const theme = createTheme({
 
 function App() {
   return (
-    <div className="App">
+    <>
       <ThemeProvider theme={theme}>
-      <MarsRover />
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/apod' component={Apod} />
+          <Route path='/marsrover' component={MarsRover} />
+        </Switch>
+      </Router>
       </ThemeProvider>
-    </div>
+    </>
   );
 }
 
