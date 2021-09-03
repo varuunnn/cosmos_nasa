@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-//import '../css/Apod.css';
+import video from '../images/video.mp4'
+import Navbar from '../components/Navbar';
 
 const Apod = () => {
   const apiKey = 'HUiJgdIHWzqeFXpza3twlqTaR6JGTCbgvgcCGxSJ';
@@ -24,6 +25,10 @@ const Apod = () => {
 
   return (
     <div className='apod'>
+      <Navbar />
+      <video autoPlay loop muted >
+                <source src={video} type='video/mp4' />
+            </ video>
       <div className='header'>
         <h1>
             <strong

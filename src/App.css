@@ -14,7 +14,8 @@ body {
 
 /* APOD */
 .apod {
-  background: url("C:\Users\LENOVO\React\cosmos-nasa\src\images\nasa_bg.jpg");
+  /* background: url("C:\Users\LENOVO\React\cosmos-nasa\src\images\nasa_bg.jpg"); */
+  background: transparent;
 }
 
 .header{
@@ -74,7 +75,8 @@ body {
 
 /* MARS ROVER */
 .marsrover {
- background: url("C:\Users\LENOVO\React\cosmos-nasa\src\images\nasa_bg.jpg");
+ /* background: url("C:\Users\LENOVO\React\cosmos-nasa\src\images\nasa_bg.jpg"); */
+  background: transparent;
 }
 
 h1 {
@@ -83,6 +85,7 @@ h1 {
 }
 .main {
   display: flex;
+  margin: 0 1rem;
   height: 50vh;
   text-align: center;
   justify-content: center;
@@ -91,7 +94,7 @@ h1 {
 .rover_select {
   flex: 1.5;
   border: 1px solid rgb(0, 225, 255);
-  margin: 1rem;
+  margin: 0.5rem;
   border-radius: 1rem;
   min-height: 40vh;
   font-size: 1.5rem;
@@ -104,7 +107,7 @@ h1 {
 .rover_info {
   flex: 2;
   border: 1px solid rgb(0, 225, 255);
-  margin: 1rem;
+  margin: 0.5rem;
   border-radius: 1rem;
   min-height: 40vh;
   font-size: 1.7rem;
@@ -117,7 +120,7 @@ h1 {
 .sol_select {
   flex: 1.5;
   border: 1px solid rgb(0, 225, 255);
-  margin: 1rem;
+  margin: 0.5rem;
   border-radius: 1rem;
   min-height: 40vh;
   font-size: 1.5rem;
@@ -139,7 +142,7 @@ h1 {
 }
 
 .img-grid{
-  margin: 20px auto;
+  margin: 20px 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;

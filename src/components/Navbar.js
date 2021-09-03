@@ -22,6 +22,11 @@ const Navbar = () => {
                 Mars Rover
               </Link>
             </li>
+            <li className='nav-item'>
+              <Link to='/star' className='nav-links'>
+                Stars
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
