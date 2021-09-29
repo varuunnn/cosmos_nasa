@@ -6,6 +6,8 @@ import Home from './pages/Home'
 import Star from './pages/Star'
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import NatEvents from './pages/NatEvents';
+import Calender from './pages/Calender';
 
 
 const theme = createTheme({
@@ -29,6 +31,8 @@ function App() {
           <Route path='/apod' component={Apod} />
           <Route path='/marsrover' component={MarsRover} />
           <Route path='/star' component={Star} />
+          <Route path='/natural-events' component={NatEvents} />
+          <Route path='/calender' component={Calender} />
         </Switch>
       </Router>
       </ThemeProvider>

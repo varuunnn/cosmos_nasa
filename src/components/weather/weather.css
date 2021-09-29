@@ -1,6 +1,5 @@
 .weather-temp {
   padding-bottom: 40px;
-  padding-left: 60px;
 }
 
 .weather-temp h1,
@@ -28,7 +27,7 @@
 
 .mainImg {
   padding-top: 10px;
-  height: 100px;
+  height: 200px;
   align-items: center;
 }
 

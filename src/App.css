@@ -3,7 +3,7 @@
 body {
   margin: 0 auto;
   font-family: 'Righteous', cursive;
-  color: #d14f4f;
+  color: #01bf71;
   line-height: 1.7;
   font-size: 19px;
   background-color: #000000;
@@ -77,6 +77,7 @@ body {
 .marsrover {
  /* background: url("C:\Users\LENOVO\React\cosmos-nasa\src\images\nasa_bg.jpg"); */
   background: transparent;
+  color: white;
 }
 
 h1 {
@@ -181,7 +182,8 @@ video {
   background: #000000;
   height: 80px;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   font-size: 1.2rem;
   position: sticky;
@@ -198,13 +200,24 @@ video {
   max-width: 1500px;
 }
 
+.navbar-logo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(7, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
-  width: 60vw;
+  width: 70vw;
   justify-content: end;
   margin-right: 2rem;
 }
@@ -214,7 +227,7 @@ video {
 }
 
 .nav-links {
-  color: rgb(0, 225, 255);
+  color: #01bf71;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -223,6 +236,104 @@ video {
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid rgb(0, 225, 255);
+  border-bottom: 4px solid #01bf71;
   transition: all 0.2s ease-out;
+}
+
+
+/* Natural Events */
+.header {
+  padding: 0;
+  margin: 0;
+  font-size: initial;
+  padding: 10px;
+  background-color: firebrick;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header h1 {
+  font-size: 25px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.map {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.location-icon {
+  font-size: 2rem;
+  color: red;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.loader img {
+  width: 400px;
+}
+
+.loader h1 {
+  margin-top: -100px;
+}
+
+.location-info {
+  position: absolute;
+  top: 80px;
+  right: 50px;
+  width: 400px;
+  min-height: 200px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.location-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.location-info li {
+  padding: 5px 0;
+}
+
+.Iss-info {
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  width: 400px;
+  min-height: 200px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.Iss-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Iss-info li {
+  padding: 5px 0;
+}
+
+.calender-cont {
+  background: transparent;
 }

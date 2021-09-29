@@ -6,12 +6,10 @@ const Navbar = () => {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
+          <Link to='/' className='navbar-logo'>
+            Cosmos Nasa
+          </Link>
           <ul className='nav-menu'>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links'>
-                Home
-              </Link>
-            </li>
             <li className='nav-item'>
               <Link to='/apod' className='nav-links'>
                 APOD
@@ -25,6 +23,16 @@ const Navbar = () => {
             <li className='nav-item'>
               <Link to='/star' className='nav-links'>
                 Stars
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/natural-events' className='nav-links'>
+                Natural Events
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/calender' className='nav-links'>
+                Calender
               </Link>
             </li>
           </ul>

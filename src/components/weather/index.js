@@ -10,10 +10,10 @@ class Weather extends Component {
   state = {
 
     userPosition: {
-      latitude: 35,
-      longitude: 139
+      latitude: 19.1463424,
+      longitude: 72.941568
     },
-    weather: {},
+    weather: "Weather",
     regionInput: "",
     loading: false
   }
@@ -24,15 +24,16 @@ class Weather extends Component {
       navigator.geolocation.getCurrentPosition(position => {
         console.log(position);
         //get the lat and long of your device
-        let pos = {
-          latitude: position.coords.latitude,
-          longitude: position.coords.longitude
-        }
+        // let pos = {
+        //   latitude: position.coords.latitude,
+        //   longitude: position.coords.longitude
+        // }
 
-        this.setState({ userPosition: pos });
-        this.setState({ loading: true });
+        this.setState({ userPosition: {latitude: position.coords.latitude, longitude: position.coords.longitude} });
+        //this.setState({ loading: true });
       })
     }
+    this.setState({ loading: true });
   }
 
   //update the value of the the input field with state
@@ -40,8 +41,8 @@ class Weather extends Component {
     this.setState({ regionInput: value })
   }
 
-  render(loading) {
-    return (loading ? (<WeatherContainer1>
+  render() {
+    return (this.state.loading ? (<WeatherContainer1>
 
       <div className="App" id='weather'>
         <div className="container">
@@ -49,11 +50,11 @@ class Weather extends Component {
           <WeatherCard2>
             <WeatherH1>Weather</WeatherH1>
           </WeatherCard2>
-          <UserLocation weather={this.state.weather} />
+          <UserLocation location={this.state.userPosition} />
         </div>
       </div>
 
-    </WeatherContainer1>) : (
+    </WeatherContainer1>) : ( 
       <WeatherContainer1>
 
         <div className="App" id='weather'>
@@ -62,7 +63,7 @@ class Weather extends Component {
             <WeatherCard2>
               <WeatherH1>Weather</WeatherH1>
             </WeatherCard2>
-            <UserLocation />
+            <UserLocation location={this.state.userPosition} />
           </div>
         </div>
 

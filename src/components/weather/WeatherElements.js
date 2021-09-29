@@ -41,7 +41,7 @@ height:1300px;
 `
 export const WeatherH1 = styled.h1 `
 font-size:2.5rem;
-color:#d14f4f;
+color:#ffffff;
 margin-bottom:0px;
 background:transparent;
 `
@@ -49,18 +49,19 @@ background:transparent;
 export const WeatherCard = styled.div `
 
 display:flex;
+color:#ffffff;
 flex-direction:column;
 justify-content:flex-start;
 align-items:center;
 border-radius:10px;
 max-height:340px;
-padding:30px;
+padding:20px;
 //box-shadow:0 1px 3px rgba(0,0,0,0.2);
 transition:all 0.2s ease-in-out;
 text-decoration:none;
-border-radius:4px;
+border-radius:10px;
 border:1px solid;
-border-color:rgb(0, 225, 255);
+border-color:#01bf71;
 
 
 &:hover{
@@ -76,7 +77,7 @@ border-color:rgb(0, 225, 255);
 export const WeatherCard1 = styled.div `
 border-radius:4px;
 border: 1px  solid;
-border-color:rgb(0, 225, 255);
+border-color:#01bf71;
 display:flex;
 flex-direction:column;
 justify-content:flex-start;
@@ -84,6 +85,7 @@ align-items:center;
 border-radius:10px;
 max-height:340px;
 padding:40px;
+color:#ffffff;
 margin-bottom:30px;
 
 box-shadow:0 1px 3px rgba(0,0,0,0.2);
@@ -105,6 +107,7 @@ text-decoration:none;
 export const WeatherCard2 = styled.div `
 
 display:flex;
+color: #ffffff;
 flex-direction:column;
 justify-content:flex-start;
 align-items:center;
