@@ -1,50 +1,56 @@
 import React, { useState, useEffect } from 'react'
+import date from 'date-and-time'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import video from '../images/video.mp4'
 import Navbar from '../components/Navbar';
 
-const Apod = () => {
+const Apod = ({ isLoggedIn }) => {
   const apiKey = 'HUiJgdIHWzqeFXpza3twlqTaR6JGTCbgvgcCGxSJ';
-  const [date, setDate] = useState(new Date());
-  const [photoData, setPhotoData] = useState(null);
+  const [d, setDate] = useState(new Date());
+
+  const onDateChange = (newdate) => {
+    setDate(newdate);
+  }
 
   useEffect(() => {
     const fetchPhoto = async() => {
       const res = await fetch(
-        `https://api.nasa.gov/planetary/apod?start_date=${date.toISOString().split('T')[0]}&api_key=${apiKey}`
+        `https://api.nasa.gov/planetary/apod?date=${date.format(d,'YYYY-MM-DD')}&api_key=${apiKey}`
       );
       const data = await res.json();
       console.log(data);
-      setPhotoData(data[1]?data[1]:data[0]);
+      setPhotoData(data);
     }
     fetchPhoto();
-  }, [date]);
+  }, [d]);
 
+  const [photoData, setPhotoData] = useState();
   if (!photoData) return <div>Error</div>;
 
   return (
     <div className='apod'>
-      <Navbar />
+      <Navbar isLoggedIn={isLoggedIn} />
       <video autoPlay loop muted >
                 <source src={video} type='video/mp4' />
             </ video>
-      <div className='header'>
+      <div className='apod-header'>
         <h1>
             <strong
             >Astronomy Picture of the Day</strong>
           </h1>
 
-          <p>
+          {/* <p style={{fontSize: "1.5rem"}}>
             Each day a different image or photograph of our fascinating universe
             is featured, along with a brief explanation written by a professional
             astronomer.
-          </p>
+          </p> */}
       </div>
       <div className='datepicker'>
       <Calendar
-        onChange={setDate}
-        value={date}
+        onChange={onDateChange}
+        locale={"en-US"}
+        value={d}
       />
       </div>
       <div className="nasa-photo">

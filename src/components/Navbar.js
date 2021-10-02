@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import SignIn from './SignIn';
+import Logout from './Logout';
 
-const Navbar = () => {
+const Navbar = ({ isLoggedIn }) => {
   return (
     <>
       <nav className='navbar'>
@@ -36,6 +38,7 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
+          {isLoggedIn ? <Logout /> : <SignIn />}
         </div>
       </nav>
     </>

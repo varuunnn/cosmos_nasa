@@ -14,7 +14,7 @@ var earthDate = obj2.photos[0].earth_date;
 var camFullName = obj2.photos[0].camera.full_name;
 var images = obj2.photos;
 
-const MarsRover = () => {
+const MarsRover = ({ isLoggedIn }) => {
   const apiKey = 'HUiJgdIHWzqeFXpza3twlqTaR6JGTCbgvgcCGxSJ';
   const [solData, setSolData] = useState(obj2);
   const [roverName, setRoverName] = useState('Curiosity');
@@ -78,7 +78,7 @@ const MarsRover = () => {
 
   return (
     <div className='marsrover'>
-      <Navbar />
+      <Navbar isLoggedIn={isLoggedIn} />
       <video autoPlay loop muted >
         <source src={video} type='video/mp4' />
       </ video>
