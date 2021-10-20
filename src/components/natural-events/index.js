@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Map from './Map';
 import Loader from './Loader';
 import Header from './Header';
+import Navbar from '../Navbar';
 
-const NaturalEvents = () => {
+const NaturalEvents = ({ isLoggedIn }) => {
   const [eventData, setEventData] = useState([])
   const [loading, setLoading] = useState(false)
   const[position, setPosition] = useState({longitude: 0, latitude:0})
@@ -28,7 +29,7 @@ const NaturalEvents = () => {
 
   return (
     <div>
-      <Header />
+      <Navbar isLoggedIn={isLoggedIn}/>
       { !loading ? <Map eventData={eventData} center={{ lat:position.latitude, lng:position.longitude }} zoom={4} position={position} setPosition={setPosition}/> : <Loader /> }
     </div>
   );

@@ -94,10 +94,10 @@ background:black;
 `
 
 export const StarH1 = styled.h1 `
-font-size:3.5rem;
+font-size:3rem;
 color:white;
-margin-bottom:100px;
-margin-top:100px;
+margin-bottom:30px;
+margin-top:90px;
 align-items:center;
 justify-content:center;
 

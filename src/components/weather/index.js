@@ -10,10 +10,10 @@ class Weather extends Component {
   state = {
 
     userPosition: {
-      latitude: 19.1463424,
-      longitude: 72.941568
+      latitude: /*19.1463424*/ null,
+      longitude: /*72.941568*/ null
     },
-    weather: "Weather",
+    timeStamp: null,
     regionInput: "",
     loading: false
   }
@@ -28,8 +28,7 @@ class Weather extends Component {
         //   latitude: position.coords.latitude,
         //   longitude: position.coords.longitude
         // }
-
-        this.setState({ userPosition: {latitude: position.coords.latitude, longitude: position.coords.longitude} });
+        this.setState({ userPosition: { latitude: position.coords.latitude, longitude: position.coords.longitude }, timeStamp: position.timestamp });
         //this.setState({ loading: true });
       })
     }
@@ -42,19 +41,9 @@ class Weather extends Component {
   }
 
   render() {
-    return (this.state.loading ? (<WeatherContainer1>
-
-      <div className="App" id='weather'>
-        <div className="container">
-
-          <WeatherCard2>
-            <WeatherH1>Weather</WeatherH1>
-          </WeatherCard2>
-          <UserLocation location={this.state.userPosition} />
-        </div>
-      </div>
-
-    </WeatherContainer1>) : ( 
+    return (this.state.loading && !this.state.userPosition.latitude ? (
+      <center><h1>Loading...</h1></center>
+    ) : (
       <WeatherContainer1>
 
         <div className="App" id='weather'>
@@ -63,7 +52,7 @@ class Weather extends Component {
             <WeatherCard2>
               <WeatherH1>Weather</WeatherH1>
             </WeatherCard2>
-            <UserLocation location={this.state.userPosition} />
+            <UserLocation location={this.state.userPosition} timeStamp={this.state.timeStamp} />
           </div>
         </div>
 

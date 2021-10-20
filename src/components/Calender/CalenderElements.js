@@ -6,8 +6,8 @@ display:flex;
 align-items:center;
 justify-content:center;
 background:transparent;
-color:aqua;
-padding-top:150px;
+color:#01bf71;
+padding-top:80px;
 padding-bottom:00px;
 
 
@@ -216,13 +216,13 @@ background:transparent;
 `
 
 export const StarH1 = styled.h1 `
-font-size:3.5rem;
+font-size:3rem;
 
 margin-bottom:10px;
-margin-top:100px;
+margin-top:50px;
 align-items:center;
 justify-content:center;
-color:#01bf71;
+color:white;
 
 @media screen and(max-width:480px){
 

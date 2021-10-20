@@ -41,7 +41,7 @@ function App() {
           <Route path='/apod' render={() => !isLoggedIn ? (<Redirect to='/'/>) : (<Apod isLoggedIn={isLoggedIn}/>)} />
           <Route path='/marsrover' render={() => !isLoggedIn ? (<Redirect to='/'/>) : (<MarsRover isLoggedIn={isLoggedIn}/>)} />
           <Route path='/star' render={() => !isLoggedIn ? (<Redirect to='/'/>) : (<Star />)} />
-          <Route path='/natural-events' render={() => !isLoggedIn ? (<Redirect to='/'/>) : (<NatEvents />)} />
+          <Route path='/natural-events' render={() => !isLoggedIn ? (<Redirect to='/'/>) : (<NatEvents isLoggedIn={isLoggedIn}/>)} />
           <Route path='/calender' render={() => !isLoggedIn ? (<Redirect to='/'/>) : (<Calender />)} />
         </Switch>
       </Router>

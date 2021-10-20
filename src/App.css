@@ -265,7 +265,7 @@ video {
 
 .map {
   width: 100vw;
-  height: 100vh;
+  height: 88.5vh;
   position: relative;
 }
 
@@ -292,7 +292,7 @@ video {
 
 .location-info {
   position: absolute;
-  top: 80px;
+  top: 50px;
   right: 50px;
   width: 400px;
   min-height: 200px;
@@ -314,7 +314,7 @@ video {
 
 .Iss-info {
   position: absolute;
-  top: 80px;
+  top: 50px;
   left: 50px;
   width: 400px;
   min-height: 200px;

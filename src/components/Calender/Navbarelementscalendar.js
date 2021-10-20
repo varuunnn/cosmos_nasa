@@ -87,7 +87,7 @@ height:80px;
 `;
 export const NavLinks = styled(linkS)`
 
-color:white;
+color:#01bf71;
 display:flex;
 align-items:center;
 text-decoration:none;
@@ -120,7 +120,7 @@ align-items:center;
 export const NavBtnLink = styled(LinkR)`
 
 border-radius:50px;
-background:#01bf71;
+background:white;
 white-space:nowrap;
 padding:10px 22px;
 color:#010606;
@@ -135,7 +135,7 @@ text-decoration:none;
 &:hover{
 
     transition:all 0.2s ease-in-out;
-    background:white;
+    background:#01bf71;
     color:#010606;
 
 

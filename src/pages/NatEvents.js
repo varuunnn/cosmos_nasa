@@ -1,10 +1,10 @@
 import React from 'react'
 import NaturalEvents from '../components/natural-events/index';
 
-const NatEvents = () => {
+const NatEvents = ({ isLoggedIn }) => {
     return (
         <div>
-            <NaturalEvents />
+            <NaturalEvents isLoggedIn={isLoggedIn}/>
         </div>
     )
 }

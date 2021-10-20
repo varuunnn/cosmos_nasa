@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from 'react'
+import IssInfoBox from '../natural-events/IssInfoBox'
 import Navbar from './NavbarWeather'
 import { WeatherH1, WeatherContainer, WeatherCard, WeatherCard1, WeatherWrapper, WeatherWrapper1 } from './WeatherElements'
 
 var directions = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"]
 
-const UserLocation = ({ location }) => {
+const closest = (h, ts) => {
+  var ob;
+  for (let i = 0; i < 48; i++) {
+    if (ts <= h[i].dt) {
+      ob = h[i];
+      break;
+    }
+  }
+  return ob
+}
+
+const UserLocation = ({ location, timeStamp }) => {
   useEffect(() => {
     const fetchData = async () => {
-      await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${location.latitude}&lon=${location.longitude}&units=metric&exclude=hourly,daily&appid=6d6b972a7fed81bbe74cfc6cab92c9be`)
+      await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${location.latitude}&lon=${location.longitude}&units=metric&exclude=daily&appid=6d6b972a7fed81bbe74cfc6cab92c9be`)
         .then(res => res.json())
         .then(result => {
           setWeather(result);
@@ -17,18 +29,28 @@ const UserLocation = ({ location }) => {
   }, [])
 
   const [weather, setWeather] = useState();
+  //console.log(weather)
+  useEffect(() => {
+    if (weather) {
+      var w = closest(weather.hourly, weather.current.dt)
+      setWInfo(w)
+    }
+  }, [weather])
 
+  const [winfo, setWInfo] = useState();
+
+  //console.log(winfo)
   return (
     <>
-      {weather &&
+      {weather && winfo &&
         <div className="user-weather">
           <WeatherWrapper1>
             <WeatherCard1>
               <div className="row">
                 <div className="col-md-3 weather-temp">
-                  <h1 style={{ fontSize: "3rem" }}>{weather.current.temp}<sup>o</sup>C , {weather.current.weather[0].main} </h1>
-                  <p style={{ fontSize: "1.3rem", margin: "0" }}>Ghatkopar, Mumbai , Maharahstra</p>
-                  <img className="mainImg" src={`http://openweathermap.org/img/wn/${weather.current.weather[0].icon}@4x.png`} alt="weather-img" />
+                  <h1 style={{ fontSize: "3rem", margin: 0 }}>{weather.current.temp}<sup>o</sup>C , {winfo.weather[0].main} </h1>
+                  <p style={{ fontSize: "1.3rem", margin: "0" }}>Mumbai , IN</p>
+                  <img className="mainImg" src={`http://openweathermap.org/img/wn/${winfo.weather[0].icon}@4x.png`} alt="weather-img" />
                 </div>
               </div>
             </WeatherCard1>
