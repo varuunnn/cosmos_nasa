@@ -17,7 +17,7 @@ const NaturalEvents = ({ isLoggedIn }) => {
   useEffect(async() => {
     setLoading(true)
     const fetchEvents = async () => {
-      const res = await fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
+      const res = await fetch('https://eonet.gsfc.nasa.gov/api/v2.1/events')
       const { events } = await res.json()
 
       setEventData(events)

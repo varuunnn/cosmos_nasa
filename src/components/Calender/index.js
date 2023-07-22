@@ -319,7 +319,7 @@ const MyCalender = () => {
             <StarLink>
               <StarCard >
                 <StarH2>JUPITER</StarH2>
-                <StarImg src="https://th.bing.com/th/id/R635b0d71d65729b97e617b82977a5b41?rik=lywevSUKCoTdBw&riu=http%3a%2f%2fwww.writersreserve.com%2fwp-content%2fuploads%2f06-PG1-Jupiter-P-Key.jpg&ehk=KtW1jvDmLjh7La7qEbKF2dOzLxd7YCkPphPfBL0vDT4%3d&risl=&pid=ImgRaw"></StarImg>
+                <StarImg src="https://imgs.search.brave.com/C7G5hYaVLaereUP-A2n09-83AsxkpCn-nOyte8k80ag/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/aUJOMmVtYzlTNnB3/ZmpfNGRyWk93SGFI/YSZwaWQ9QXBp"></StarImg>
                 <StarH2>{J*100}</StarH2>
               </StarCard>
             </StarLink>
@@ -374,7 +374,7 @@ const MyCalender = () => {
             <StarLink>
               <StarCard >
                 <StarH2>JUPITER</StarH2>
-                <StarImg src="https://th.bing.com/th/id/R635b0d71d65729b97e617b82977a5b41?rik=lywevSUKCoTdBw&riu=http%3a%2f%2fwww.writersreserve.com%2fwp-content%2fuploads%2f06-PG1-Jupiter-P-Key.jpg&ehk=KtW1jvDmLjh7La7qEbKF2dOzLxd7YCkPphPfBL0vDT4%3d&risl=&pid=ImgRaw"></StarImg>
+                <StarImg src="https://imgs.search.brave.com/C7G5hYaVLaereUP-A2n09-83AsxkpCn-nOyte8k80ag/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2U0/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/aUJOMmVtYzlTNnB3/ZmpfNGRyWk93SGFI/YSZwaWQ9QXBp"></StarImg>
                 <StarH2>{Jd.toFixed(2)}</StarH2>
               </StarCard>
             </StarLink>
